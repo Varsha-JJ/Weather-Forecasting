@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Search from '../Components/Search';
 
 const Home = () => {
+
   return (
     <div className='d-flex justify-content-center mt-5'>
         <Card style={{width:'1200px', height: '650px'}}>
