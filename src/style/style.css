@@ -1,0 +1,23 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(1,1,23)!important;
+    background: linear-gradient(90deg, rgb(12, 12, 60) 0%, rgba(14,96,101,1) 65%, rgba(19,159,196,1) 100%)!important;
+}
+
+.card-sty{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.resultcard{
+    border: 1px solid white;
+}
+.head{
+    font-weight: bold;
+}
+
+.heading{
+    font-weight: bold;
+    font-size: 1.8rem;
+}

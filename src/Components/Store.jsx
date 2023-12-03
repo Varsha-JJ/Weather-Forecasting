@@ -4,7 +4,8 @@ import dataslice from '../Components/Data';
 
 const Store = configureStore({
     reducer : {
-        dataslice : values
+        datastore :  dataslice
     }
 })
+
 export default Store

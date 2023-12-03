@@ -1,21 +1,23 @@
-import createSlice  from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-const initialstate = {
+
+
+const initialState = {
     datas : ''
 }
 
 
 const Data = createSlice({
     name : 'datastore',
-    initialstate,
+    initialState,
     reducers : {
-        setdata : (state,action)=>{
-            state.datas = action.payload
+        setdatas : (state,actions)=>{
+            state.datas = actions.payload
         }
     }
     
 })
 
-export const {setdata} = Data.actions
+export const {setdatas} = Data.actions
 
 export default Data.reducer

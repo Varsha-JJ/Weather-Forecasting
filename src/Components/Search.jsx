@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Form from 'react-bootstrap/Form';
-import { useState } from 'react';
+import { setdatas } from '../Components/Data';
+import {useDispatch} from 'react-redux';
+import '../style/style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Search = () => {
-    const [data,setdata] = useState('');
+
+
+    const [value,setvalue] = useState('')
+    const dispatch = useDispatch()
     const handlesearch = (event) =>{
-        setdata(event.target.value)
+        setvalue(event.target.value)
     }
-    console.log(data);
+
+    useEffect(()=>{
+        dispatch(setdatas(value))
+    })
+
   return (
     <div>
       <Form.Control
               type="search"
               placeholder="Search for cities"
-              className="me-2"
+              className="me-2 search"
               aria-label="Search"
               onChange={handlesearch}
             />
