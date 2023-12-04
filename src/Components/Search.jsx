@@ -14,9 +14,15 @@ const Search = () => {
         setvalue(event.target.value)
     }
 
-    useEffect(()=>{
+    // useEffect(()=>{
+    //     dispatch(setdatas(value))
+    // })
+
+    const searchLocation = (e) =>{
+      if(e.key === 'Enter'){
         dispatch(setdatas(value))
-    })
+      }
+    }
 
   return (
     <div>
@@ -26,6 +32,7 @@ const Search = () => {
               className="me-2 search"
               aria-label="Search"
               onChange={handlesearch}
+              onKeyPress={searchLocation}
             />
     </div>
   )
